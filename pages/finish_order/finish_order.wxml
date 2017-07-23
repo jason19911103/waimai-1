@@ -1,0 +1,39 @@
+<!--finish_order.wxml-->
+<view class="header">
+    <text class="header-title">订单配送至</text>
+    <text class="header-local">{{city}}</text>
+    <text class="header-person">{{person.name}} {{person.phone}}</text>
+</view>
+
+<scroll-view scroll-y="true" style="height: 950rpx; width: 750rpx;">
+
+    <view class="-border"><text class="order-way">在线支付</text></view>
+
+    <view class="-border">
+        <view class="-border-">
+            <view class="order-title">
+                <view class="line"></view>
+                <text class="order-title-text">{{buiness_name}}</text>
+                <view class="line"></view>
+            </view>
+            <block wx:for="{{order_item}}" wx:for-item="item">
+                <view class="order-item">
+                    <text class="order-item-name">{{item.name}}</text>
+                    <text class="order-item-price">￥{{item.price}}</text>
+                </view>
+                <view class="hr"></view>
+            </block>
+        </view>
+    </view>
+
+    <text class="will-order">待支付￥{{price}}</text>
+
+</scroll-view>
+
+<view class="order">
+    <view class="order-">
+        <view class="material-icons order-img">shopping_cart</view>
+        <view class="order-price">￥{{price}}</view>
+    </view>
+    <view class="order-btn" style="background-color: #58d178;" bindtap="funishOrder">去支付</view>
+</view>

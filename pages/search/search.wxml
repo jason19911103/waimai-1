@@ -1,0 +1,57 @@
+<!--search.wxml-->
+<view class="all">
+    <view class="search">
+        <view class="search-input">
+            <view class="material-icons search-img">search</view>
+            <view class="search-fiter" bindtap="searchFiter">
+                <text class="search-fiter-text">{{search_fiter}}</text>
+                <view class="material-icons search-fiter-img">arrow_drop_down</view>
+            </view>
+            <input class="search-text" bindchange="searchChange"/>
+        </view>
+        <text class="search-btn" bindtap="_search">搜索</text>
+    </view>
+    <view class="hr"></view>
+
+    <view class="searcg-result">
+
+        <view class="filter">
+            <view class="filter-" bindtap="distanceFiter">{{distance_fiter_name}}
+                <view class="material-icons">{{distance_fiter}}</view>
+            </view>
+            <view class="filter-" bindtap="scoreFiter">好评
+                <view class="material-icons">{{score_fiter}}</view>
+            </view>
+        </view>
+
+        <block class="result" wx:for="{{results}}" wx:for-item="result">
+            <navigator class="business-" url="../dishes/dishes?id={{result.id}}">
+                <view class="business">
+                    <image src="{{result.image}}" class="business-img">{{result.name}}</image>
+
+                    <view class="business-ditail">
+
+                        <text class="business-name">{{result.name}}</text>
+
+                        <view class="business-ach">
+                            <view class="business-score" wx:for="{{result.star}}" wx:for-item="item">
+                                <view class="material-icons business-star">{{item}}</view>
+                            </view>
+                            <text class="business-score-text">{{result._score}}</text>
+                            <text class="business-score-sale">月售{{result.score}}单</text>
+                        </view>
+
+                        <view class="business-cost">
+                            <text class="business-cost-">￥{{result.sale_start}}起送|{{result.delivery_fee}}配送费</text>
+                            <text class="business-distance">{{result.distance}}km|{{result.min}}分钟</text>
+                        </view>
+
+                    </view>
+                </view>
+
+                <view class="business-hr"></view>
+            </navigator>
+        </block>
+    </view>
+
+</view>

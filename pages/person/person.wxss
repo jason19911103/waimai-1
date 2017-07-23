@@ -1,0 +1,60 @@
+/* person.wxss */
+
+.header {
+    background-color: #0096ff;
+    width: 750rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.header-title-text {
+    font-size: 1.7em;
+    color: white;
+}
+
+.header-title- {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.header-notic {
+    margin-right: 30rpx;
+}
+
+.header-person {
+    display: flex;
+    margin-left: 30rpx;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.person-img {
+    border-radius: 500rpx;
+    background-color: #A5D5FC;
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 30rpx;
+}
+
+.person-name {
+    color: white;
+    font-size: 1.5em;
+}
+
+.person-phone {
+    margin-top: 30rpx;
+    display: flex;
+    color: white;
+}
+
+.person-phone-text {
+    margin-left: 10rpx;
+}

@@ -1,0 +1,60 @@
+/* order.wxss */
+
+.header {
+    background-color: #0096ff;
+}
+
+.header-text {
+    margin-left: 30rpx;
+    font-size: 1.7em;
+    color: white;
+}
+
+.body {
+    margin-top: 20rpx;
+}
+
+.body-title-text {
+    margin-left: 30rpx;
+}
+
+.body-order {
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+}
+
+.order-time {
+    width: 95rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.order-img {
+    margin-left: 10rpx;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.order-detial {
+    margin-left: 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-detial-price {
+    font-size: 1.25em;
+}
+
+.-hr {
+    border-style: dotted;
+    border-color: #e9e9e9;
+    border-bottom: 1px;
+    width: 700rpx;
+    margin-left: 25rpx;
+}

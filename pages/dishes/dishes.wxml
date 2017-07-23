@@ -1,0 +1,87 @@
+<!--detail.wxml-->
+<image src="{{business.image}}" class="bur"></image>
+
+<view class="all">
+
+    <!--商家详情-->
+    <view class="business">
+        <image src="{{business.image}}" class="business-img">{{business.name}}</image>
+        <view class="business-detial">
+            <text class="business-name">{{business.name}}</text>
+            <view class="business-text">
+                <text>商家配送|平均38分钟|{{business.delivery_fee}}配送费</text>
+            </view>
+        </view>
+    </view>
+
+
+    <!--商家菜品, 评价tab-->
+    <view class="tab" style="width: 750rpx;">
+        <view class="-tab {{currentTab==0 ? 'tab-item' : ''}}" bindtap="switchTab" data-tab="0">
+            <view>商品</view>
+        </view>
+        <view class="-tab {{currentTab==1 ? 'tab-item' : ''}}" bindtap="switchTab" data-tab="1">
+            <view>评价</view>
+        </view>
+    </view>
+
+    <view class="hr"></view>
+
+    <!--商家菜品, 评价swiper-->
+    <swiper class="swiper" bindchange="tabChange" current="{{currentTab}}" style="height: 725rpx;">
+        <!--商家菜品-->
+        <swiper-item class="swiper-item">
+            <scroll-view scroll-y="true" style="height: 350px" enable-back-to-top="true">
+                <checkbox-group bindchange="orderChange">
+                    <view wx:for="{{dishess}}" wx:for-item="dishes" wx:for-index="i">
+                        <label class="dishes">
+                        <view class="dishe">
+                            <image src="{{dishes.image}}" class="dishe-img">{{dishes.name}}</image>
+                            <view class="dishe-detial">
+                                <text class="dishe-name">{{dishes.name}}</text>
+                                <text class="dishe-text">{{dishes.detial}}</text>
+                                <text class="dishe-arc">月售{{dishes.sale_count}}份|好评率{{dishes.score}}%</text>
+                                <view class="dishe-">
+                                    <text class="dishe-price">￥{{dishes.price}}</text>
+                                    <checkbox value="{{dishes.id}}" color="#2395ff"/>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="dishes-hr"></view>
+                    </label>
+                    </view>
+                </checkbox-group>
+            </scroll-view>
+        </swiper-item>
+
+        <!--评价-->
+        <swiper-item>
+            <scroll-view scroll-y="true" style="height: 350px" enable-back-to-top="true">
+                <view class="swiper-item">
+                    <view class="swiper-item-key">
+                        <block wx:for="{{evaluations}}" wx:for-item="evaluation">
+                            <view class="evaluation">
+                                <image src="{{evaluation.image}}" class="evaluation-img">{{evaluation.name}}</image>
+                                <view class="evaluation-detial">
+                                    <text class="user-name">{{evaluation.name}}</text>
+                                    <text class="evaluation-time">{{evaluation.day}}</text>
+                                    <text class="evaluation-text">{{evaluation.text}}</text>
+                                </view>
+                            </view>
+                            <view class="dishes-hr"></view>
+                        </block>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+
+    <view class="order">
+        <view class="order-">
+            <view class="material-icons order-img">shopping_cart</view>
+            <view class="order-price">￥{{order_price}}</view>
+        </view>
+        <view class="order-btn" style="background-color: {{order_btn_color}};" bindtap="{{order_btn_action}}">去结算</view>
+    </view>
+
+</view>

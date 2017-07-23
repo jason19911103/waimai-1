@@ -1,0 +1,21 @@
+<!--person.wxml-->
+<view class="header">
+    <view class="header-title">
+        <text class="header-title-text">我的</text>
+        <view class="header-title-">
+            <view class="material-icons header-notic">notifications</view>
+            <view class="material-icons header-opt">settings</view>
+        </view>
+    </view>
+
+    <view class="header-person">
+        <image class="person-img" src="{{person.image}}">{{person.name}}</image>
+        <view class="person-detial">
+            <text class="person-name">{{person.name}}</text>
+        <view class="person-phone">
+            <view class="material-icons person-phone-img">smartphone</view>
+            <text class="person-phone-text">{{person.phone}}</text>
+        </view>
+    </view>
+</view>
+</view>

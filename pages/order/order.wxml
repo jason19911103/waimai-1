@@ -1,0 +1,22 @@
+<!--order.wxml-->
+<view class="header">
+    <text class="header-text">订单</text>
+</view>
+
+<view class="body">
+    <text class="body-title-text">我的订单</text>
+    <block wx:for="{{order_list}}" wx:for-item="item">
+        <view class="body-order">
+            <view class="order-time">
+                <text>{{item.day}}</text>
+                <text>{{item.time}}</text>
+            </view>
+            <image class="order-img" src="{{item.image}}"></image>
+            <view class="order-detial">
+                <text class="order-detial-price">总价: ￥{{item.price}}</text>
+                <text class="order-detial-text">{{item.test}}</text>
+            </view>
+        </view>
+        <view class="-hr"></view>
+    </block>
+</view>

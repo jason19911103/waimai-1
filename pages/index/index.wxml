@@ -1,0 +1,178 @@
+<!--index.wxml-->
+<view class="all">
+
+    <view class="head" wx:if="{{is_show_search}}">
+        <!--标题-->
+        <view class="title">
+            <text class="title-text">外卖</text>
+            <!--天气-->
+            <view class="weather">
+                <view class="weather-text">
+                    <text class="tmp">{{now_temp}}°</text>
+                    <text class="cond">{{now_cond_txt}}</text>
+                </view>
+                <view class="material-icons weather-img">{{now_cond_code}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="head" wx:else>
+        <!--搜索-->
+        <view class="search-" bindtap="toSearchPage">
+            <view class="material-icons search-img">search
+                <text class="search-text">搜索</text>
+            </view>
+        </view>
+        <view class="-hr"></view>
+    </view>
+
+    <scroll-view scroll-y="true" style="height: 1000rpx; width: 750rpx;" bindscroll="show_search" enable-back-to-top="true">
+
+        <!--头-->
+        <view class="head">
+
+            <!--地址-->
+            <view class="location">
+                <view class="material-icons location-img">location_on
+                    <text class="location-text">{{city}}{{district}}</text>
+                </view>
+            </view>
+
+            <!--搜索-->
+            <view class="search" bindtap="toSearchPage">
+                <view class="material-icons search-img">search
+                    <text class="search-text">搜索</text>
+                </view>
+            </view>
+
+            <!--搜索关键词-->
+            <view class="search-key">
+                <text class="search-key-text">汇聚时光</text>
+                <text class="search-key-text">河粉</text>
+                <text class="search-key-text">炒粉</text>
+                <text class="search-key-text">都可</text>
+            </view>
+
+        </view>
+
+        <!--滑块视图-->
+        <swiper indicator-dots="true" indicator-color="#D8D8D8" indicator-active-color="#B4B4B4" class="swiper">
+            <swiper-item>
+
+                <view class="swiper-item">
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_1.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">美食</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_2.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">超市</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_3.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">生鲜果蔬</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_4.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">甜点饮品</text>
+                    </view>
+                </view>
+
+                <view class="swiper-item">
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_5.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">送药上门</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_6.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">准时达</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_7.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">薯条汉堡</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_8.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">小吃馆</text>
+                    </view>
+                </view>
+
+            </swiper-item>
+
+            <swiper-item>
+
+                <view class="swiper-item">
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_9.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">新商家</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_10.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">免配送费</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_11.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">鲜花蛋糕</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_12.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">品质优选</text>
+                    </view>
+                </view>
+
+                <view class="swiper-item">
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_13.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">日韩料理</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_14.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">家常菜</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_15.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">能量西餐</text>
+                    </view>
+                    <view class="swiper-item-key">
+                        <image src="https://static.ztcaoll222.cn/img/index/icon_16.jpg" class="swiper-img"></image>
+                        <text class="swiper-text">无辣不欢</text>
+                    </view>
+                </view>
+
+            </swiper-item>
+        </swiper>
+
+        <view class="hr"></view>
+
+        <block wx:for="{{businesss}}" wx:for-item="business">
+            <!--商家-->
+            <navigator class="business-" url="../dishes/dishes?id={{business.id}}">
+                <view class="business">
+                    <image src="{{business.image}}" class="business-img">{{business.name}}</image>
+
+                    <view class="business-ditail">
+
+                        <text class="business-name">{{business.name}}</text>
+
+                        <view class="business-ach">
+                            <view class="business-score" wx:for="{{business.star}}" wx:for-item="item">
+                                <view class="material-icons business-star">{{item}}</view>
+                            </view>
+                            <text class="business-score-text">{{business.score}}</text>
+                            <text class="business-score-sale">月售{{business.sale_count}}单</text>
+                        </view>
+
+                        <view class="business-cost">
+                            <text class="business-cost-">￥{{business.sale_start}}起送|{{business.delivery_fee}}配送费</text>
+                            <text class="business-distance">{{business.distance}}km|{{business.min}}分钟</text>
+                        </view>
+
+                    </view>
+                </view>
+
+                <view class="business-hr"></view>
+            </navigator>
+        </block>
+
+    </scroll-view>
+
+</view>

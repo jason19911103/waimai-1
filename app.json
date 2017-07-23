@@ -1,0 +1,40 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/dishes/dishes",
+        "pages/finish_order/finish_order",
+        "pages/order/order",
+        "pages/person/person",
+        "pages/search/search"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#0096FF",
+        "navigationBarTitleText": "Takeaway",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "list": [
+            {
+                "iconPath": "static/img/home.png",
+                "selectedIconPath": "static/img/home-blue.png",
+                "pagePath": "pages/index/index",
+                "text": "外卖"
+            },
+            {
+                "iconPath": "static/img/order.png",
+                "selectedIconPath": "static/img/order-blue.png",
+                "pagePath": "pages/order/order",
+                "text": "订单"
+            },
+            {
+                "iconPath": "static/img/person.png",
+                "selectedIconPath": "static/img/person-blue.png",
+                "pagePath": "pages/person/person",
+                "text": "我的"
+            }
+        ],
+        "selectedColor": "#0096FF"
+    }
+}

@@ -1,0 +1,110 @@
+/* finish_order.wxss */
+
+.header {
+    background-color: #0096ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    font-weight: 800;
+    font-size: 0.8em;
+    color: white;
+}
+
+.header-local {
+    font-weight: 800;
+    font-size: 1.5em;
+    color: white;
+}
+
+.header-person {
+    font-size: 0.75em;
+    color: white;
+}
+
+.-border {
+    border: 10rpx;
+    border-style: solid;
+    border-color: #f5f5f5;
+    padding: 25rpx;
+}
+
+.order-way {
+    font-weight: 900;
+}
+
+.-border- {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    border-bottom: 1rpx;
+    border-style: groove;
+    border-color: #e8e8e8;
+    width: 30%;
+    float: left;
+}
+
+.order-title-text {
+    width: 35%;
+    float: left;
+    text-align: center;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20rpx;
+}
+
+.will-order {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 30rpx;
+}
+
+.order {
+    padding: 10rpx;
+    background-color: #454547;
+    width: 750rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order- {
+    margin-left: 30rpx;
+    display: flex;
+}
+
+.order-img {
+    border-radius: 500rpx;
+    padding: 10rpx;
+    background-color: #2395ff;
+    border-style: solid;
+    border-color: #2395ff;
+    color: white;
+    font-size: 1.5em;
+}
+
+.order-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 10rpx;
+}
+
+.order-btn {
+    color: white;
+    margin-right: 30rpx;
+    padding-left: 50rpx;
+    padding-right: 50rpx;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+}

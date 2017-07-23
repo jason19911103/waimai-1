@@ -1,0 +1,170 @@
+/* search.wxss */
+
+.search {
+    top: 0;
+    left: 0;
+    background-color: #0096ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-input {
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+    height: 75rpx;
+    background-color: white;
+    border-radius: 30rpx;
+    color: #818181;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    width: 650rpx;
+}
+
+.search-img {
+    font-size: 1em;
+    margin-left: 30rpx;
+}
+
+.search-fiter {
+    align-items: center;
+    display: flex;
+}
+
+.search-fiter-text {
+    font-size: 0.8em;
+}
+
+.search-fiter-img {
+    font-size: 1em;
+}
+
+.search-btn {
+    width: 100rpx;
+    color: white;
+}
+
+.hr {
+    border-bottom: 10rpx;
+    border-style: solid;
+    border-color: #0096ff;
+}
+
+.filter {
+    height: 80rpx;
+    margin-left: 130rpx;
+    margin-right: 130rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter- {
+    display: flex;
+}
+
+.business {
+    margin-top: 30rpx;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.business-img {
+    margin-left: 30rpx;
+    width: 110rpx;
+    height: 110rpx;
+}
+
+.business-ditail {
+    margin-left: 30rpx;
+    width: 550rpx;
+}
+
+.business-name {
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.business-ach {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.business-score {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.business-star {
+    color: #ffaa0c;
+}
+
+.business-score-text {
+    margin-left: 10rpx;
+    color: #ffaa0c;
+    font-size: 0.85em;
+}
+
+.business-score-sale {
+    padding: 3rpx;
+    margin-left: 10rpx;
+    font-size: 0.85em;
+}
+
+.business-cost {
+    display: flex;
+    justify-content: space-between;
+}
+
+.business-cost- {
+    font-size: 0.7em;
+}
+
+.business-distance {
+    font-size: 0.7em;
+}
+
+.business-hr {
+    margin-top: 30rpx;
+    border-style: dotted;
+    border-color: #e9e9e9;
+    border-bottom: 1px;
+    width: 90%;
+    margin-left: 30rpx;
+    margin-right: 30rpx;
+}
+
+.dishe {
+    display: flex;
+    margin-left: 160rpx;
+    margin-top: 30rpx;
+    width: 600rpx;
+}
+
+.dishe-item {
+    margin-left: 10rpx;
+    width: 160rpx;
+    height: 225rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dishe-img {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.dishe-name {
+    font-size: 0.6em;
+}
+
+.dishe-cost {
+    font-size: 0.8em;
+    color: #ff6f19;
+    font-weight: 600;
+}
